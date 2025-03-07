@@ -1,19 +1,15 @@
-
-name: checking triggers
-on: 
-  workflow_dispatch:
-  push:
-    branches:
-    - main
+name: Trigger-demo
+#run-name: 
+on: workflow_dispatch
 jobs:
-  new file:
+  checkout1:
     runs-on: ubuntu-latest
-  steps: 
-  - name: checkout
-    uses: actions/checkout@v2
-  - name: have fun
-    run:  echo "hello"
-  - name: listing
-    run:  echo " listing"
-        echo " ls -ltr "
-        ls -ltr
+    steps:
+      - run: echo "checking out the code."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "creating a new file."
+      - name: List files in the repository
+        run: |
+          ls -ltr
+      - run: echo "This job's status is."
