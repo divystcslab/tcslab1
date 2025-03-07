@@ -9,11 +9,11 @@ jobs:
   new file:
     runs-on: ubuntu-latest
   steps: 
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: have fun
-      run:  echo "hello"
-    - name: listing
-      run:  echo " listing"
+  - name: checkout
+    uses: actions/checkout@v2
+  - name: have fun
+    run:  echo "hello"
+  - name: listing
+    run:  echo " listing"
         echo " ls -ltr "
         ls -ltr
