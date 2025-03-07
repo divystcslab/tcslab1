@@ -1,0 +1,19 @@
+name: checking triggers
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+Jobs:
+  hello:
+  runs-on: ubuntu-latest
+  steps: 
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: create a file
+      run:  echo "hello" >> file.txt
+    - name: listing
+      run:
+        echo " listing"
+        echo " ls -ltr "
+        ls -ltr
