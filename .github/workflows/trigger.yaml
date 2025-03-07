@@ -9,6 +9,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: echo "creating a new file."
+      - run: touch "myfile"
       - name: List files in the repository
         run: |
           ls -ltr
