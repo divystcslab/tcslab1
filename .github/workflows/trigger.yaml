@@ -5,16 +5,15 @@ on:
   push:
     branches:
     - main
-Jobs:
-  hello:
-  runs-on: ubuntu-latest
+jobs:
+  new file:
+    runs-on: ubuntu-latest
   steps: 
     - name: checkout
-      uses: actions/checkout@v4
-    - name: create a file
-      run:  echo "hello" >> file.txt
+      uses: actions/checkout@v2
+    - name: have fun
+      run:  echo "hello"
     - name: listing
-      run:
-        echo " listing"
+      run:  echo " listing"
         echo " ls -ltr "
         ls -ltr
