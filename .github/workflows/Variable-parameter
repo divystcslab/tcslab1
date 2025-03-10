@@ -23,3 +23,4 @@ jobs:
     steps:
       - name: Greet a user
         run: echo "Hello $NAME! this is my $TRAINING training" 
+
