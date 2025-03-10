@@ -1,4 +1,3 @@
-
 name: variable and parameter
 on:
   workflow_dispatch:
